@@ -104,7 +104,7 @@ class CustomFilters
      */
     public static function money($value)
     {
-        return $this->money_with_currency($value);
+        return CustomFilters::money_with_currency($value);
     }
 
     /**
@@ -117,7 +117,7 @@ class CustomFilters
      */
     public static function money_with_currency($value)
     {
-        $formatted_string = $this->money_without_currency($value);
+        $formatted_string = CustomFilters::money_without_currency($value);
 
         $locale_info = localeconv();
         if ($locale_info[$key_prefix.'_cs_precedes']) {
@@ -150,7 +150,7 @@ class CustomFilters
     {
         $locale_info = localeconv();
         $value = floatval($value) / (10 * $locale_info['frac_digits']);
-        return $this->money_with_currency($value);
+        return CustomFilters::money_with_currency($value);
     }
 
     /**
@@ -225,7 +225,7 @@ class CustomFilters
      */
     public static function handleize($value)
     {
-        return $this->handle($value);
+        return CustomFilters::handle($value);
     }
 
     /**
@@ -305,7 +305,7 @@ class CustomFilters
      *
      * @return string
      */
-    public static function pluralize(array $items, $singular, $plural)
+    public static function pluralize($items, $singular, $plural)
     {
         return ($items == 1) ? $singular : $plural;
     }
@@ -537,7 +537,7 @@ class CustomFilters
      */
     public static function link_to_vendor($vendor, $label)
     {
-        return '<a href="'.$this->url_for_vendor($vendor).'">'.$label.'</a>';
+        return '<a href="'.CustomFilters::url_for_vendor($vendor).'">'.$label.'</a>';
     }
 
     /**
@@ -551,7 +551,7 @@ class CustomFilters
      */
     public static function link_to_type($type, $label)
     {
-        return '<a href="'.$this->url_for_type($type).'">'.$label.'</a>';
+        return '<a href="'.CustomFilters::url_for_type($type).'">'.$label.'</a>';
     }
 
     /**
@@ -579,7 +579,7 @@ class CustomFilters
      */
     public static function link_to_add_tag($tag)
     {
-        return $this->link_to_tag($tag);
+        return CustomFilters::link_to_tag($tag);
     }
 
     /**
@@ -594,7 +594,7 @@ class CustomFilters
      */
     public static function link_to_remove_tag($tag)
     {
-        return $this->link_to_tag($tag);
+        return CustomFilters::link_to_tag($tag);
     }
 
     /**
@@ -626,7 +626,7 @@ class CustomFilters
      */
     public static function product_img_url($object, $size)
     {
-        return $this->img_url($object, $size);
+        return CustomFilters::img_url($object, $size);
     }
 
     /**
@@ -639,9 +639,9 @@ class CustomFilters
      *
      * @return string
      */
-    public static function collection_img_url($tag)
+    public static function collection_img_url($object, $size)
     {
-        return $this->img_url($object, $size);
+        return CustomFilters::img_url($object, $size);
     }
 
     /**
@@ -714,7 +714,7 @@ class CustomFilters
         if (!$format) {
             $format = 'c';
         }
-        return '<time datetime="'.date('c', $timestamp).'">'.date($format $timestamp).'</time>';
+        return '<time datetime="'.date('c', $timestamp).'">'.date($format, $timestamp).'</time>';
     }
 
     /**
@@ -794,7 +794,7 @@ class CustomFilters
      */
     public static function highlight_active_tag($tag)
     {
-        return $this->link_to_tag($tag);
+        return CustomFilters::link_to_tag($tag);
     }
 
     /**
