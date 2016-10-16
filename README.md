@@ -28,7 +28,7 @@ Add the following repository to your composer Json
 
 And install the package
 
-    composer require liquid/liquid
+    composer require simotod/liquid-shopify
 
 ## Example template
 

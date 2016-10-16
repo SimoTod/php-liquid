@@ -1,5 +1,5 @@
 {
-    "name": "liquid/liquid",
+    "name": "simotod/liquid-shopify",
     "description": "Liquid template engine for PHP",
 	"keywords": ["liquid", "template"],
 	"homepage": "https://github.com/SimoTod/php-liquid",
