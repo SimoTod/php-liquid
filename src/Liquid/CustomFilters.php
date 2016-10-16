@@ -674,7 +674,6 @@ class CustomFilters
 
     /**
      * Creates a collection-aware product URL.
-     * @TODO The link is not valid but it won't break the layout.
      * (https://help.shopify.com/themes/liquid/filters/url-filters#within)
      *
      * @param string $url
@@ -697,7 +696,7 @@ class CustomFilters
      */
     public static function date($timestamp, $format)
     {
-        return date($format, $timestamp);
+        return strftime($format, $timestamp);
     }
 
     /**
