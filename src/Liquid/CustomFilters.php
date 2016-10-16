@@ -677,13 +677,13 @@ class CustomFilters
      * @TODO The link is not valid but it won't break the layout.
      * (https://help.shopify.com/themes/liquid/filters/url-filters#within)
      *
-     * @param string $product
+     * @param string $url
      *
      * @return string
      */
-    public static function within($product)
+    public static function within($url)
     {
-        return '<a href="#">Lorem ipsum</a>';
+        return $url;
     }
 
     /**
