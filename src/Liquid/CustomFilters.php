@@ -527,20 +527,6 @@ class CustomFilters
     }
 
     /**
-     * Generates an HTML link. The first parameter is the URL of the link,
-     * and the optional second parameter is the title of the link.
-     * (https://help.shopify.com/themes/liquid/filters/url-filters#link_to)
-     *
-     * @param string $label
-     *
-     * @return string
-     */
-    public static function link_to($url, $label)
-    {
-        return '<a href="'.$url.'">'.$label.'</a>';
-    }
-
-    /**
      * Creates an HTML link to a collection page that lists all products belonging to a vendor.
      * (https://help.shopify.com/themes/liquid/filters/url-filters#link_to_vendor)
      *
