@@ -1,4 +1,4 @@
-# Liquid template engine for PHP [![Build Status](https://travis-ci.org/kalimatas/php-liquid.svg?branch=master)](https://travis-ci.org/kalimatas/php-liquid)
+# Liquid template engine for PHP
 
 Liquid is a PHP port of the [Liquid template engine for Ruby](https://github.com/Shopify/liquid), which was written by Tobias Lutke. Although there are many other templating engines for PHP, including Smarty (from which Liquid was partially inspired), Liquid had some advantages that made porting worthwhile:
 
@@ -11,17 +11,24 @@ Liquid is a PHP port of the [Liquid template engine for Ruby](https://github.com
  * 100% Markup compatibility with a Ruby templating engine, making templates usable for either.
  * Unit tested: Liquid is fully unit-tested. The library is stable and ready to be used in large projects.
 
-## Why Liquid?
-
-Why another templating library?
-
-Liquid was written to meet three templating library requirements: good performance, easy to extend, and simply to use.
+This fork is based on [php-liquid](https://github.com/kalimatas/php-liquid) by Guz Alexander.
 
 ## Installing
 
 You can install this lib via [composer](https://getcomposer.org/):
 
-    composer create-project liquid/liquid
+Add the following repository to your composer Json
+
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:SimoTod/php-liquid.git"
+        }
+    ],
+
+And install the package
+
+    composer require liquid/liquid
 
 ## Example template
 
@@ -64,17 +71,4 @@ To find more examples have a look at the `examples` directory or at the original
 
 Have a bug? Please create an issue here on GitHub!
 
-[https://github.com/kalimatas/php-liquid/issues](https://github.com/kalimatas/php-liquid/issues)
-
-## Fork notes
-
-This fork is based on [php-liquid](https://github.com/harrydeluxe/php-liquid) by Harald Hanek.
-
-It contains several improvements:
-
- * namespaces
- * installing via composer
- * new standard filters
- * `raw` tag added
-
-Any help is appreciated!
+[https://github.com/SimoTod/php-liquid/issues](https://github.com/kalimatas/php-liquid/issues)

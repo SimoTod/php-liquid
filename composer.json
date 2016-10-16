@@ -2,14 +2,18 @@
     "name": "liquid/liquid",
     "description": "Liquid template engine for PHP",
 	"keywords": ["liquid", "template"],
-	"homepage": "https://github.com/kalimatas/php-liquid",
+	"homepage": "https://github.com/SimoTod/php-liquid",
     "license": "MIT",
 	"type": "library",
     "authors": [
         {
+            "name": "Simone Todaro",
+            "email": "simo.todaro@gmail.com"
+        },
+        {
             "name": "Guz Alexander",
             "email": "kalimatas@gmail.com",
-			"homepage": "http://guzalexander.com"
+            "homepage": "http://guzalexander.com"
         },
 		{
 			"name": "Harald Hanek"
