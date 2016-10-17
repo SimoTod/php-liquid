@@ -406,6 +406,10 @@ class CustomFilters
      */
     public static function img_url($object, $size)
     {
+        if (array_key_exists('image', $object)) {
+            return $object['image'];
+        }
+
         switch ($size) {
             case 'pico':
                 $arg = [16,16];
