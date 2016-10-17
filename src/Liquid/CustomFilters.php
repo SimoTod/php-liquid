@@ -120,6 +120,7 @@ class CustomFilters
         $formatted_string = CustomFilters::money_without_currency($value);
 
         $locale_info = localeconv();
+        $key_prefix = floatval($value) < 0 ? 'n' : 'p';
         if ($locale_info[$key_prefix.'_cs_precedes']) {
             if ($locale_info[$key_prefix.'_sep_by_space']) {
                 $formatted_string = $locale_info['currency_symbol'].' '.$formatted_string;
