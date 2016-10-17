@@ -697,7 +697,7 @@ class CustomFilters
      */
     public static function date($timestamp, $format)
     {
-        return strftime($format, $timestamp);
+        return strftime($format, intval($timestamp));
     }
 
     /**
