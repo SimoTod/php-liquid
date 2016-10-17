@@ -408,31 +408,31 @@ class CustomFilters
     {
         switch ($size) {
             case 'pico':
-                $arg = [16,16];
+                $args = [16,16];
                 break;
             case 'icon':
-                $arg = [32,32];
+                $args = [32,32];
                 break;
             case 'thumb':
-                $arg = [50,50];
+                $args = [50,50];
                 break;
             case 'small':
-                $arg = [100,100];
+                $args = [100,100];
                 break;
             case 'compact':
-                $arg = [160,160];
+                $args = [160,160];
                 break;
             case 'medium':
-                $arg = [240,240];
+                $args = [240,240];
                 break;
             case 'large':
-                $arg = [480,480];
+                $args = [480,480];
                 break;
             case 'grande':
-                $arg = [600,600];
+                $args = [600,600];
                 break;
             case 'grande':
-                $arg = [1024,1024];
+                $args = [1024,1024];
                 break;
             default:
                 $args = explode('x', $size);
